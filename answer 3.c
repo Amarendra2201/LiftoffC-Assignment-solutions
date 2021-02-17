@@ -1,19 +1,25 @@
+
+
 #include <stdio.h>
+#include<string.h>
 
 int main()
 {
-    float radius, diameter, circumference, area;
-    
-    printf("Enter radius of circle: ");
-    scanf("%f", &radius);
 
-    diameter = 2 * radius;
-    circumference = 2 * 3.14 * radius;
-    area = 3.14 * (radius * radius);
+  	char str[100];
+  	int i, totalwords;
+  	totalwords = 1;
 
-    printf("Diameter of circle = %.2f units \n", diameter);
-    printf("Circumference of circle = %.2f units \n", circumference);
-    printf("Area of circle = %.2f sq. units ", area);
+  	printf("\n Please Enter any String :  ");
+  	gets(str);
 
+  	for(i = 0; str[i] != '\0'; i++)
+	{
+		if(str[i] == ' ' || str[i] == '\n' || str[i] == '\t')
+		{
+			totalwords++;
+		}
+	}
+	printf("\n The Total Number of Words in this String %s  = %d", str, totalwords);
     return 0;
 }

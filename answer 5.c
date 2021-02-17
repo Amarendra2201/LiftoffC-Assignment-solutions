@@ -1,36 +1,30 @@
+
+
 #include <stdio.h>
- 
+
 int main()
 {
-    char ch;
-     
-    printf("Enter a character: ");
-    scanf("%c",&ch);
-     
-    
-    if((ch>='A' && ch<='Z') || (ch>='a' && ch<='z'))
-    {
-        switch(ch)
-        {
-            case 'A':
-            case 'E':
-            case 'I':
-            case 'O':
-            case 'U':
-            case 'a':
-            case 'e':
-            case 'i':
-            case 'o':
-            case 'u':
-                printf("%c is a VOWEL.\n",ch);
-                break;
-            default:
-                printf("%c is a CONSONANT.\n",ch);            
-        }
-    }
-    else
-    {
-        printf("%c is not an alphabet.\n",ch);
-    } 
+	int i, j, n = 3;
+	int count;
+
+	count = n * 2 - 1;
+
+	for(i=1; i<= count; i++)
+	{
+		for(j=1; j<=count; j++)
+		{
+			if(j==i || (j==count - i + 1))
+			{
+				printf("*");
+			}
+			else
+			{
+				printf(" ");
+			}
+		}
+		printf("\n");
+	}
+
+ 
     return 0;
 }
