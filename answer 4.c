@@ -1,38 +1,42 @@
-
-
 #include <stdio.h>
 
 int main()
 {
- int arr[100], n, i, small, large;
+    int phy, chem, bio, math, comp; 
+    float per; 
 
-    printf("Enter the number of elements : ");
-    scanf("%d", &n);
+    printf("Enter five subjects marks: ");
+    scanf("%d%d%d%d%d", &phy, &chem, &bio, &math, &comp);
 
-    for (i = 0; i < n; i++)
+    per = (phy + chem + bio + math + comp) / 5.0;
+
+    printf("Percentage = %.2f\n", per);
+
+
+    if(per >= 90)
     {
-        printf("Enter element %d : ", i + 1);
-        scanf("%d", &arr[i]);
+        printf("Grade A");
+    }
+    else if(per >= 80)
+    {
+        printf("Grade B");
+    }
+    else if(per >= 70)
+    {
+        printf("Grade C");
+    }
+    else if(per >= 60)
+    {
+        printf("Grade D");
+    }
+    else if(per >= 40)
+    {
+        printf("Grade E");
+    }
+    else
+    {
+        printf("Grade F");
     }
 
-    small = arr[0];
-    large = arr[0];
-
-    for (i = 1; i < n; i++)
-    {
-        if (arr[i] < small)
-        {
-            small = arr[i];
-        }
-
-        if (arr[i] > large)
-        {
-            large = arr[i];
-        }
-    }
-
-    printf("\nLargest element is : %d", large);
-    printf("\nSmallest element is : %d", small);
- 
     return 0;
 }

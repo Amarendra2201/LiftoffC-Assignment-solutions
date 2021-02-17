@@ -1,18 +1,27 @@
-
-
 #include <stdio.h>
 
 int main()
 {
-   int num, sum=0;
-    printf("Enter any number to find sum of its digit: ");
-    scanf("%d", &num);
-    while(num!=0)
-    {
-        sum += num % 10;
-        num = num / 10;
-    }
-    printf("Sum of digits = %d", sum);
+    int p, q;
+    int sum, sub, mul, mod;
+    float div;
+
+    /* Input two numbers from user */
+    printf("Enter any two numbers::\n");
+    scanf("%d%d", &p, &q, "\n");
+
+    sum = p + q;
+    sub = p - q;
+    mul = p * q;
+    div = (float)p / q;
+    mod = p % q;
+
+    printf("\n");
+    printf("SUM        %d + %d = %d\n", p, q, sum);
+    printf("DIFFERENCE %d - %d = %d\n", p, q, sub);
+    printf("PRODUCT    %d * %d = %d\n", p, q, mul);
+    printf("QUOTIENT   %d / %d = %f\n", p, q, div);
+    printf("MODULUS    %d %% %d = %d\n", p, q, mod);
 
     return 0;
 }
