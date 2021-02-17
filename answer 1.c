@@ -6,7 +6,6 @@ int main()
     int sum, sub, mul, mod;
     float div;
 
-    /* Input two numbers from user */
     printf("Enter any two numbers::\n");
     scanf("%d%d", &p, &q, "\n");
 
